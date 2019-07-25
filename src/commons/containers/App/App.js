@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { Route, Switch } from 'react-router-dom';
+import { getCryptoList } from '../../actions/actions';
 import styles from './App.css';
 import Header from './../../components/Header/Header';
 import Liquidity from '../../../pages/Liquidity/Liquidity';
@@ -20,7 +21,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    //     this.props.dispatch(getCryptoList());
+    this.props.dispatch(getCryptoList());
   }
 
   toggleTheme() {
