@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  --primaryBg: #223751;
+  --primaryText: rgba(255, 255, 255, 0.9);
+  --secondaryText: rgba(255, 255, 255, 0.4);
+  --primaryBorderColor: #4e5f74;
+  --headerBg: #1d3047;
+  --headerShadowColor: #142339;
+  --activeHighlight: #35A3D6;
+
+  /* Table specific colors */
+  --tableHighlightBg: #2f3f55;
+  --tableScoreHigh: #59c35d;
+  --tableScoreLow: #ff4949;
+
+  /* Chart specific colors */
+  --chartBg: #111E32;
+  --chartText: rgba(255, 255, 255, 0.8);
+  --chartGridLines: rgba(58, 85, 121, 0.3);
+  --chartScoreHighlight: #26D5CB;
+  --chartTooltipBg: #1B2A41;
+  --chartTooltipBorderBg: #323f54;
+}
+
+html[data-theme="light"] {
+  --primaryBg: #f0f0f0;
+  --primaryText: rgba(0, 0, 0, 0.65);
+  --secondaryText: rgba(0, 0, 0, 0.45);
+  --primaryBorderColor: #cdcdcd;
+  --headerBg: #dedede;
+  --headerShadowColor: #cccccc;
+  --activeHighlight: #35A3D6;
+
+  /* Table specific colors */
+  --tableHighlightBg: #dedede;
+  --tableScoreHigh: #59c35d;
+  --tableScoreLow: #ff4949;
+
+  /* Chart specific colors */
+  --chartBg: #dedede;
+  --chartText: rgba(0, 0, 0, 0.65);
+  --chartGridLines: #c1c1c1;
+  --chartTooltipBg: #ccc;
+  --chartTooltipBorderBg: rgba(0, 0, 0, 0.65);
+}
+
+html.theme-transition,
+html.theme-transition *,
+html.theme-transition *:before,
+html.theme-transition *:after {
+  transition: all 750ms !important;
+  transition-delay: 0 !important;
+}
+
+#root, html, body {
+  height: 100%;
+}
+
+body {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 14px;
+  background: var(--primaryBg);
+  color: var(--primaryText);
+  min-width: 320px;
+  letter-spacing: 0.05em;
+  overflow: auto;
+}
+
+a {
+  color: var(--primaryText);
+  text-decoration: none;
+}
+
+input, select, button {
+  outline: none;
+}

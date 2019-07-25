@@ -1,0 +1,13 @@
+.wrapper {
+  height: 100%;
+}
+
+.container {
+  height: calc(100% - 70px);
+}
+
+@media all and (max-width: 600px) {
+  .container {
+    height: calc(100% - 50px);
+  }
+}

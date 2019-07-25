@@ -1,0 +1,120 @@
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tableHeader {
+  height: 40px;
+}
+
+.tableBody {
+  height: calc(100% - 40px);
+  overflow: auto;
+}
+
+.tableBody tr:hover,
+.tableHeader tr {
+  background-color: var(--tableHighlightBg);
+  transition: all 0.15s ease-out;
+}
+
+.table th, .table td {
+  border: 1px solid var(--primaryBorderColor);
+  padding-left: 10px;
+  color: var(--primaryText);
+}
+
+.table th {
+  text-align: left;
+  font-size: 16px;
+  height: 40px;
+}
+
+.table td {
+  height: 32px;
+}
+
+.table th:nth-child(1),
+.table td:nth-child(1) {
+  width: 5%;
+}
+
+.table th:nth-child(2),
+.table td:nth-child(2) {
+  width: 25%;
+}
+
+.table th:nth-child(3),
+.table td:nth-child(3),
+.table th:nth-child(4),
+.table td:nth-child(4) {
+  width: 15%;
+}
+
+.table th:nth-child(5),
+.table td:nth-child(5),
+.table th:nth-child(6),
+.table td:nth-child(6) {
+  width: 20%;
+}
+
+.table td.low,
+.table td.high {
+  font-weight: 600;
+}
+
+.table td.low {
+  color: var(--tableScoreLow);
+}
+
+.table td.high {
+  color: var(--tableScoreHigh);
+}
+
+.currencyCell {
+  font-family: monospace;
+}
+
+@media all and (max-width: 600px) {
+  .tableHeader {
+    display: none;
+  }
+
+  .tableBody {
+    height: 100%;
+  }
+
+  .table {
+    border: 0;
+  }
+
+  .table tr {
+    border-bottom: 3px solid var(--primaryBorderColor);
+    display: block;
+    margin-bottom: 15px;
+  }
+
+  .table td {
+    border-bottom: 0;
+    display: block;
+    width: 100% !important;
+    font-size: 12px;
+    align-items: center;
+    text-align: right;
+    padding: 6px 10px 0;
+  }
+
+  .table td::before {
+    content: attr(data-label);
+    font-family: 'PT Sans', sans-serif;
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: left;
+    color: var(--secondaryText);
+  }
+
+  .table td:last-child {
+    border-bottom: 0;
+  }
+}

@@ -1,0 +1,31 @@
+.wrapper {
+  padding: 0 30px;
+  height: 100%;
+}
+
+.chartWrapper {
+  background-color: var(--chartBg);
+}
+
+.chart {
+
+}
+
+.chart line {
+  stroke: var(--chartGridLines);
+}
+
+.chart text {
+  fill: var(--chartText);
+}
+
+@media all and (max-width: 600px) {
+  .wrapper {
+    padding: 0 20px;
+  }
+
+  .chartWrapper {
+    height: calc(100% - 85px);
+    overflow: auto;
+  }
+}

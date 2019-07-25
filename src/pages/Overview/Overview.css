@@ -1,0 +1,19 @@
+.wrapper {
+  padding: 0 30px;
+  height: 100%;
+}
+
+.container {
+  height: calc(100% - 65px);
+}
+
+@media all and (max-width: 600px) {
+  .wrapper {
+    padding: 0 20px;
+  }
+
+  .container {
+    padding-top: 12px;
+    height: calc(100% - 85px);
+  }
+}
