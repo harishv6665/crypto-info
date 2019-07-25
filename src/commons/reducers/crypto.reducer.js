@@ -2956,18 +2956,18 @@ const initialState = {
 
 const crypto = (state = initialState, action) => {
   switch (action.type) {
-    case ACTION_GET_CRYPTO_LIST_SUCCESS:
-      return {
-        ...state,
-        cryptoList: action.payload,
-      };
-    case ACTION_SET_RECORD_VIEW:
-      return {
-        ...state,
-        viewLength: action.payload
-      };
-    default:
-      return state;
+  case ACTION_GET_CRYPTO_LIST_SUCCESS:
+    return {
+      ...state,
+      cryptoList: action.payload,
+    };
+  case ACTION_SET_RECORD_VIEW:
+    return {
+      ...state,
+      viewLength: action.payload
+    };
+  default:
+    return state;
   }
 };
 

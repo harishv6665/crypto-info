@@ -16,7 +16,6 @@ function* getCryptoListAsync() {
   })
     .then(res => res.json())
     .catch((err) => {
-      console.error('ERROR: ', err);
       return err;
     });
   yield put(getCryptoListSuccess(response.data));

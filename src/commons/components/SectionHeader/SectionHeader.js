@@ -21,8 +21,8 @@ const SectionHeader = ({ searchKey, updateRecordView, onSearchKeyChange, records
             onChange={updateRecordView}
             defaultValue={records}>
             {[100, 50, 10].map(val => <option
-                key={val}
-              >{val}</option>,
+              key={val}
+            >{val}</option>,
             )}
           </select>
         </div>
