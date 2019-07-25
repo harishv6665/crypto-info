@@ -5,11 +5,11 @@ import { ACTION_GET_CRYPTO_LIST } from '../constants/constants';
 function* getCryptoListAsync() {
   try {
     let url = '/v1/cryptocurrency/listings/latest?start=1&limit=100';
-    let options = {};
-    if (process.env.NODE_ENV !== 'development') {
-      url = 'https://pro-api.coinmarketcap.com' + url;
-      options = { mode: 'no-cors' };
-    }
+//    let options = {};
+//    if (process.env.NODE_ENV !== 'development') {
+//      url = 'https://pro-api.coinmarketcap.com' + url;
+//      options = { mode: 'no-cors' };
+//    }
     const headers = {
       'X-CMC_PRO_API_KEY': '58913850-d11c-402f-8305-cffcd07d293b',
       'Content-Type': 'application/json',
@@ -19,7 +19,6 @@ function* getCryptoListAsync() {
       headers,
       method: 'GET',
       credentials: 'include',
-      ...options
     })
       .then(res => res.json())
       .catch((err) => {
