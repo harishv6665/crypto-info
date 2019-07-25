@@ -5,6 +5,7 @@
 
 .chartWrapper {
   background-color: var(--chartBg);
+  max-height: 400px;
 }
 
 .chart {
