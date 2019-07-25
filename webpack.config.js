@@ -12,6 +12,13 @@ module.exports = {
   devServer: {
     contentBase: path.join(__dirname, 'build'),
     historyApiFallback: true,
+    proxy: {
+      '/v1': {
+        target: 'https://pro-api.coinmarketcap.com',
+        secure: false,
+        changeOrigin: true,
+      },
+    },
   },
   module: {
     rules: [
