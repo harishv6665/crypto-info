@@ -8,6 +8,7 @@ function* getCryptoListAsync() {
     'X-CMC_PRO_API_KEY': '58913850-d11c-402f-8305-cffcd07d293b',
     'Content-Type': 'application/json',
     'Accept': 'application/json',
+    'Access-Control-Allow-Origin': '*',
   };
   const response = yield fetch(url, {
     headers,
