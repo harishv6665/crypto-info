@@ -3,14 +3,11 @@ import { getCryptoListSuccess } from '../actions/actions';
 import { ACTION_GET_CRYPTO_LIST } from '../constants/constants';
 
 function* getCryptoListAsync() {
-  const url = 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest?start=1&limit=100';
+  const url = '/v1/cryptocurrency/listings/latest?start=1&limit=100';
   const headers = {
     'X-CMC_PRO_API_KEY': '58913850-d11c-402f-8305-cffcd07d293b',
     'Content-Type': 'application/json',
     'Accept': 'application/json',
-    'Access-Control-Allow-Origin': '*',
-    'Access-Control-Allow-Methods': 'GET',
-    'Access-Control-Allow-Headers': 'Content-Type, Authorization'
   };
   const response = yield fetch(url, {
     headers,
