@@ -16,6 +16,8 @@ function* getCryptoListAsync() {
   })
     .then(res => res.json())
     .catch((err) => {
+      /* eslint-disable */
+      console.error('ERROR: ', err);
       return err;
     });
   yield put(getCryptoListSuccess(response.data));

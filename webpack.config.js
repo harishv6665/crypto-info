@@ -12,12 +12,19 @@ module.exports = {
   devServer: {
     contentBase: path.join(__dirname, 'build'),
     historyApiFallback: true,
+    proxy: {
+      '/v1': {
+        target: 'https://pro-api.coinmarketcap.com',
+        secure: false,
+        changeOrigin: true,
+      },
+    },
   },
   module: {
     rules: [
       {
         test: /\.(js)$/,
-        exclude: /node_modules/,
+        exclude: [/node_modules/, /\.test\.js$/],
         use: ['babel-loader', 'eslint-loader'],
       },
       {
@@ -34,7 +41,7 @@ module.exports = {
               localIdentName: '[name]__[local]___[hash:base64:5]',
             },
           },
-        ]
+        ],
       },
       {
         test: [/global.css/],
