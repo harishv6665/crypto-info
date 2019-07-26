@@ -24,7 +24,7 @@ module.exports = {
     rules: [
       {
         test: /\.(js)$/,
-        exclude: /node_modules/,
+        exclude: [/node_modules/, /\.test\.js$/],
         use: ['babel-loader', 'eslint-loader'],
       },
       {
@@ -41,7 +41,7 @@ module.exports = {
               localIdentName: '[name]__[local]___[hash:base64:5]',
             },
           },
-        ]
+        ],
       },
       {
         test: [/global.css/],
