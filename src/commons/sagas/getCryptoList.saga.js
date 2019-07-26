@@ -9,6 +9,8 @@ function* getCryptoListAsync() {
     'Content-Type': 'application/json',
     'Accept': 'application/json',
     'Access-Control-Allow-Origin': '*',
+    'Access-Control-Allow-Methods': 'GET',
+    'Access-Control-Allow-Headers': 'Content-Type, Authorization'
   };
   const response = yield fetch(url, {
     headers,
