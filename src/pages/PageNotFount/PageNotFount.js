@@ -1,10 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import styles from './PageNotFount.css';
 
 const PageNotFount = () => (
-  <div>
-    <h1>Page Not Found</h1>
-    <Link to="/">Take me to home</Link>
+  <div className={styles.wrapper}>
+    <h1 className={styles.title}>Page Not Found</h1>
+    <Link className={styles.link} to="/">Take me home</Link>
   </div>
 );
 
